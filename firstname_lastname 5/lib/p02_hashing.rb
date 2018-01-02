@@ -6,7 +6,7 @@ class Array
   def hash
     hash = 1
     self.each_with_index do |num, idx|
-      hash *= (((19 * idx) + num) * 187)
+      hash *= (((19 * idx) + num.hash) * 187)
     end
     hash
   end
